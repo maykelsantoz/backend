@@ -12,7 +12,7 @@ app.use(cors());
 app.use("/", routes);
 
 mongoose.connect(
-  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_DATABASE}`,
+  `${process.env.MONGO_URL}`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
