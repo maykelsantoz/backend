@@ -1,5 +1,4 @@
-import Product from "../models/ProductSchema";
-//const Product = require("../models/ProductSchema");
+const Product = require("../models/ProductSchema");
 
 module.exports = {
   async index(req, res) {

@@ -1,10 +1,8 @@
-import express from "express";
-import { Router } from "express";
+const express = require("express");
+const ProductController = require("./controller/ProductController");
+const StockController = require("./controller/StockController");
 
-import ProductController from "./controller/ProductController";
-import StockController from "./controller/StockController";
-
-const routes = new Router();
+const routes = new express.Router();
 
 routes.get("/products", ProductController.index);
 routes.get("/products/:id", ProductController.data);
@@ -17,4 +15,4 @@ routes.post("/stocks", StockController.store);
 routes.put("/stocks/:id", StockController.update);
 routes.delete("/stocks/:id", StockController.delete);
 
-export default routes;
+module.exports = routes;
