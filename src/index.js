@@ -19,11 +19,7 @@ mongoose.connect(
     //useCreateIndex: true
     //useFindAndModify: false
   },
-  () => {
-    console.log(`⚡ Database Connected ! `);
-  }
+  () => {}
 );
 
-app.listen(3333, () => {
-  console.log("⚡ Server listening on Start");
-});
+app.listen(process.env.PORT || 3333);
