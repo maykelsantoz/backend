@@ -1,11 +1,12 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+
+import routes from "./routes";
 
 const app = express();
 app.use(express.json());
 
-routes = require("./routes");
 require("dotenv").config();
 
 app.use(cors());
@@ -16,7 +17,7 @@ mongoose.connect(
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    //useCreateIndex: true,
+    //useCreateIndex: true
     //useFindAndModify: false
   },
   () => {

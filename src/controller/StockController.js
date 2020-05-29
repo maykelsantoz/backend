@@ -1,4 +1,4 @@
-const Stock = require("../models/StockSchema");
+import Stock from "../models/StockSchema";
 
 module.exports = {
   async index(req, res) {
